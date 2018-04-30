@@ -1,6 +1,8 @@
 package com.test.SeleniumTest;
 
+import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -9,9 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class TestSelenium {
- public static WebDriver driver;
-@BeforeClass
-public static void openBrowser() {
+ WebDriver driver;
+ FetchingWebElements ft;
+@Before
+void openBrowser() {
 	String path = "I:\\ntt java\\chromedriver_win32\\chromedriver.exe";
 	System.setProperty("webdriver.chrome.driver", path);
 	
@@ -26,9 +29,16 @@ System.out.println(driver.getTitle());
 	
 	
 }
+@Test
+public void elementFB() {
+	
+	ft=new FetchingWebElements(driver);
+	
+	
+}
 
-@AfterClass
-public static void closeBrowser() {
+@After
+public void closeBrowser() {
 	 driver.quit();
 	
 }
