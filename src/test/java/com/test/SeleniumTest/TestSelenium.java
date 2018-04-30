@@ -14,7 +14,7 @@ public class TestSelenium {
  WebDriver driver;
  FetchingWebElements ft;
 @Before
-void openBrowser() {
+public void openBrowser() {
 	String path = "I:\\ntt java\\chromedriver_win32\\chromedriver.exe";
 	System.setProperty("webdriver.chrome.driver", path);
 	
@@ -33,6 +33,7 @@ System.out.println(driver.getTitle());
 public void elementFB() {
 	
 	ft=new FetchingWebElements(driver);
+	ft.SendKey1();
 	
 	
 }

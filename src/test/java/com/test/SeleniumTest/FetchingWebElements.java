@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FetchingWebElements {
 	   WebDriver driver;
-	   @FindBy(id="email")
+	   @FindBy(name="email")
 	WebElement uname;
-	   @FindBy(id="pass")
+	   @FindBy(name="pass")
 		WebElement pass;
 	   @FindBy(id="u_0_9")
 	 		WebElement login;
@@ -18,10 +18,11 @@ public class FetchingWebElements {
 		PageFactory.initElements(driver, this);
 		
 	}
-	void SendKey() {
+	void SendKey1() {
 		uname.sendKeys("shailendersinghrt11@yahoo.com");
 		pass.sendKeys("8500148125");
 		login.click();
+		System.out.println("complete");
 		
 	}
 
